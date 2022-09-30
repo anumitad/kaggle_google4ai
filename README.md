@@ -1,3 +1,11 @@
+# basic overview of the competition 
+
+competition page: https://www.kaggle.com/competitions/AI4Code
+
+"The goal of this competition is to understand the relationship between code and comments in Python notebooks. You are challenged to reconstruct the order of markdown cells in a given notebook based on the order of the code cells, demonstrating comprehension of which natural language references which code."
+
+JSON files were given to be used for training, and "each file contains the code and markdown cells of a Kaggle notebook. The code cells are in their original (correct) order. The markdown cells have been shuffled and placed after the code cells." The aim is to figure out the correct positioning of the markdown cells amongst the code cells.
+
 # basic overview of how the model works 
 
 took a pairwise approach: 
@@ -16,5 +24,5 @@ determinging the order:
 - after prediction, all cells were ordered in ascending order of their "labels"
 
 additional details:
-- was given 2000 training examples, of which 1000 were used for training and validation, and 500 were used for testing (there is no overlap in these sets)
+- of the given training examples, of which 1000 were used for training and validation, and 500 were used for testing (there is no overlap in these sets)
 - predictions from the test set were scored using the kendall tau metric, accuracy obtained was 0.666
